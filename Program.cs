@@ -3,39 +3,101 @@ using Efferent.HL7.V2;
 using Oracle.ManagedDataAccess;
 using Oracle.ManagedDataAccess.Client;
 
-
-
-// Get the database password from an environment variable for security
-string? dbPassword = Environment.GetEnvironmentVariable("PATIENT_APP_DB_PASSWORD");
-if (string.IsNullOrEmpty(dbPassword))
+static async Task Main(string[] args)
 {
-    Console.WriteLine("Database password not set. Please set the PATIENT_APP_DB_PASSWORD environment variable.");
-    return;
-}
-string connectionString = $"DATA SOURCE=localhost:1521/XEPDB1;USER ID=PatientAppUser;PASSWORD={dbPassword};";
-await using (OracleConnection connection = new OracleConnection(connectionString))
-{
-    try
+    // Get the database password from an environment variable for security
+    string? dbPassword = Environment.GetEnvironmentVariable("PATIENT_APP_DB_PASSWORD");
+    if (string.IsNullOrEmpty(dbPassword))
     {
-        await connection.OpenAsync();
-        Console.WriteLine("Connection successful!");
-
-        // //Clear Table before Insert
-        // using (OracleCommand truncateCommand = new OracleCommand("TRUNCATE TABLE PATIENTS", connection))
-        // {
-        //     await truncateCommand.ExecuteNonQueryAsync();
-        //     Console.WriteLine("Tabelle PATIENTS geleert.");
-        // }
-
-        //Reading data from HL7 file
-
-        string hl7folderPath = Environment.GetEnvironmentVariable("HL7_FOLDER_PATH")!; 
-        if (string.IsNullOrEmpty(hl7folderPath))
+        Console.WriteLine("Database password not set. Please set the PATIENT_APP_DB_PASSWORD environment variable.");
+        return;
+    }
+    string connectionString = $"DATA SOURCE=localhost:1521/XEPDB1;USER ID=PatientAppUser;PASSWORD={dbPassword};";
+    await using (OracleConnection connection = new OracleConnection(connectionString))
+    {
+        try
         {
-            // Fallback to a default path if the environment variable is not set
-            hl7folderPath = @"C:\Users\User\VsCode Projects\HL7DataProcessor\HL7_Messages";
+            await connection.OpenAsync();
+            Console.WriteLine("Connection successful!");
+
+            // //Clear Table before Insert
+            // using (OracleCommand truncateCommand = new OracleCommand("TRUNCATE TABLE PATIENTS", connection))
+            // {
+            //     await truncateCommand.ExecuteNonQueryAsync();
+            //     Console.WriteLine("Tabelle PATIENTS geleert.");
+            // }
+
+            //Reading data from HL7 file
+
+            string hl7folderPath = Environment.GetEnvironmentVariable("HL7_FOLDER_PATH")!;
+            if (string.IsNullOrEmpty(hl7folderPath))
+            {
+                Console.WriteLine("HL7_FOLDER_PATH environment variable not set.\n" +
+                                  "Please set the HL7_FOLDER_PATH environment variable to the path where your HL7 files are stored.\n" +
+                                  "Example: HL7_FOLDER_PATH=/path/to/your/hl7/files");
+                 
+                return;
+            }
+            Console.WriteLine($"Reading HL7 files from: {hl7folderPath}");
+            
+
+            //Reading data from the database
+            string selectQuery = "SELECT * FROM PATIENTS";
+            using (OracleCommand command = new OracleCommand(selectQuery, connection))
+            {
+                using (OracleDataReader reader = await command.ExecuteReaderAsync())
+                {
+                    while (await reader.ReadAsync())
+                    {
+                        Console.WriteLine($"PatientID: {reader["Patient_ID"]}, FirstName: {reader["First_Name"]}, LastName: {reader["Last_Name"]}, DateOfBirth: {reader["Date_Of_Birth"]}");
+                    }
+                }
+            }
+
         }
-        Console.WriteLine($"Reading HL7 files from: {hl7folderPath}");
+        catch (OracleException ex)
+        {
+            Console.WriteLine($"Oracle error: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"General error: {ex.Message}");
+        }
+    }
+}
+
+
+
+class HL7Processor
+{
+
+    public string PatientID { get; set; }
+    public string LastName { get; set; }
+    public string FirstName { get; set; }
+    
+    public DateTime DateOfBirth { get; set; }
+
+
+    //Ich will die HL7-Dateien in einem bestimmten Ordner verarbeiten
+    //Was brauche ich dafür?
+    //1. Ich brauche den Pfad zu dem Ordner, in dem die HL7-Dateien gespeichert sind
+    //2. Ich brauche eine Methode, die alle HL7-Dateien in diesem Ordner liest und verarbeitet
+    //3. Ich brauche eine Methode, die die HL7-Dateien in einer bestimmten Reihenfolge verarbeitet
+    //4. Ich brauche eine Methode, die die HL7-Dateien möglicherweise für OracleDB formatiert
+    //5. Ich brauche eine Methode, die die HL7-Dateien in die OracleDB einfügt
+
+    public
+
+
+    public static async Task ProcessHL7FilesAsync(string hl7folderPath)
+    {
+        if (!Directory.Exists(hl7folderPath))
+        {
+            Console.WriteLine($"The specified HL7 folder path does not exist: {hl7folderPath}");
+            return;
+        }
+
+        // Get all HL7 files in the specified folder
         string[] hl7Files = Directory.GetFiles(hl7folderPath, "*.hl7");
         foreach (var hl7File in hl7Files)
         {
@@ -50,35 +112,28 @@ await using (OracleConnection connection = new OracleConnection(connectionString
                 Console.WriteLine("PID segment not found in HL7 message.");
                 continue;
             }
-            string patientId = pidSegment.Fields(2).Value; // PID-3 (index 2, as HL7 is 1-based)
-            string lastName = pidSegment.Fields(5).Components(1).Value; // PID-5.1 (index 1)
-            string firstName = pidSegment.Fields(5).Components(2).Value; // PID-5.2 (index 2)
-            DateTime dateOfBirth = DateTime.Parse(pidSegment.Fields(7).Value); // PID-7
+            string PatientID = pidSegment.Fields(2).Value; // PID-3 (index 2, as HL7 is 1-based)
+            string LastName = pidSegment.Fields(5).Components(1).Value; // PID-5.1 (index 1)
+            string FirstName = pidSegment.Fields(5).Components(2).Value; // PID-5.2 (index 2)
+            DateTime DateOfBirth = DateTime.Parse(pidSegment.Fields(7).Value); // PID-7
         }
 
-        //Reading data from the database
-        string selectQuery = "SELECT * FROM PATIENTS";
-        using (OracleCommand command = new OracleCommand(selectQuery, connection))
-        {
-            using (OracleDataReader reader = await command.ExecuteReaderAsync())
-            {
-                while (await reader.ReadAsync())
-                {
-                    Console.WriteLine($"PatientID: {reader["Patient_ID"]}, FirstName: {reader["First_Name"]}, LastName: {reader["Last_Name"]}, DateOfBirth: {reader["Date_Of_Birth"]}");
-                }
-            }
-        }
+        // Parse each HL7 file
 
-    }
-    catch (OracleException ex)
-    {
-        Console.WriteLine($"Oracle error: {ex.Message}");
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"General error: {ex.Message}");
+        foreach ()
+
+
+
     }
 }
+
+
+
+
+
+
+
+
 
 
 // Message message = new Message();
@@ -93,7 +148,7 @@ await using (OracleConnection connection = new OracleConnection(connectionString
 
 
 //Sample Data
-        //const string HL7_ADT_A01 = "HL7_ADT_A01";
+//const string HL7_ADT_A01 = "HL7_ADT_A01";
 //         var patients = new List<dynamic>
 // {
 //     new { ID = "P001", FN = "Anna", LN = "Meier", DOB = new DateTime(1985, 3, 15, 0, 0, 0, DateTimeKind.Utc), G = "F", Street = "Eichenweg 12", City = "Berlin", State = "BE", Zip = "10115", MsgType = HL7_ADT_A01 },
