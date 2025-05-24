@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HL7DataProcessor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea6be3bfd238bfacc579273b94d0c1456d564b0a")]
 [assembly: System.Reflection.AssemblyProductAttribute("HL7DataProcessor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HL7DataProcessor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
