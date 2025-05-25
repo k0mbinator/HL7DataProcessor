@@ -29,3 +29,4 @@ c:\Users\User\VsCode Projects\HL7DataProcessor\obj\Debug\net9.0\refint\HL7DataPr
 c:\Users\User\VsCode Projects\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.pdb
 C:\Users\User\VsCode Projects\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.genruntimeconfig.cache
 C:\Users\User\VsCode Projects\HL7DataProcessor\obj\Debug\net9.0\ref\HL7DataProcessor.dll
+c:\Users\User\VsCode Projects\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.sourcelink.json
