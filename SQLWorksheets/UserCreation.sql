@@ -1,7 +1,6 @@
 -- 1. Neuen Benutzer mit Passwort erstellen
---    Ersetze 'Dein_Sicheres_Passwort' durch ein Passwort deiner Wahl!
---    Dieses Passwort muss die Oracle-Komplexitätsregeln erfüllen (oft: Groß-/Kleinbuchstaben, Zahlen, Sonderzeichen, min. 8 Zeichen).
-CREATE USER PatientAppUser IDENTIFIED BY "Dein_Sicheres_Passwort";
+
+CREATE USER PatientAppUser IDENTIFIED BY "&&patient_app_user_password";
 
 -- 2. Dem Benutzer Rechte zum Verbinden (Session erstellen) geben
 GRANT CREATE SESSION TO PatientAppUser;
