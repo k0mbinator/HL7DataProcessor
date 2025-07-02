@@ -11,5 +11,9 @@
     <PackageReference Include="HL7-V2" Version="3.4.0" />
     <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="23.8.0" />
   </ItemGroup>
-
+  <ItemGroup>
+      <Content Include="HL7_Messages\**">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
 </Project>

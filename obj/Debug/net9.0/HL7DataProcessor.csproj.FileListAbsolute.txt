@@ -62,3 +62,13 @@ C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\refint\HL7Dat
 C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.pdb
 C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.genruntimeconfig.cache
 C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\ref\HL7DataProcessor.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7_Messages\patient_anna.hl7
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7_Messages\patient_annaSchulz.hl7
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7_Messages\patient_clara.hl7
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7_Messages\patient_david.hl7
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7_Messages\patient_emil.hl7
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7_Messages\patient_lena.hl7
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7_Messages\patient_lisa.hl7
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7_Messages\patient_max.hl7
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7_Messages\patient_maxKoch.hl7
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7_Messages\patient_sarah.hl7
