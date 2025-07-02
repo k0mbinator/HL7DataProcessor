@@ -508,23 +508,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\Kombinator\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\VsCode Projects\\HL7DataProcessor\\HL7DataProcessor.csproj",
+      "projectUniqueName": "C:\\Users\\Kombinator\\source\\repos\\HL7DataProcessor\\HL7DataProcessor.csproj",
       "projectName": "HL7DataProcessor",
-      "projectPath": "C:\\Users\\User\\VsCode Projects\\HL7DataProcessor\\HL7DataProcessor.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\VsCode Projects\\HL7DataProcessor\\obj\\",
+      "projectPath": "C:\\Users\\Kombinator\\source\\repos\\HL7DataProcessor\\HL7DataProcessor.csproj",
+      "packagesPath": "C:\\Users\\Kombinator\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kombinator\\source\\repos\\HL7DataProcessor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kombinator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -552,7 +552,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -583,7 +583,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

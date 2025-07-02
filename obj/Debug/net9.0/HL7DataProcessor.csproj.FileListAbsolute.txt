@@ -30,3 +30,35 @@ c:\Users\User\VsCode Projects\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor
 C:\Users\User\VsCode Projects\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.genruntimeconfig.cache
 C:\Users\User\VsCode Projects\HL7DataProcessor\obj\Debug\net9.0\ref\HL7DataProcessor.dll
 c:\Users\User\VsCode Projects\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.sourcelink.json
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7DataProcessor.exe
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7DataProcessor.deps.json
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7DataProcessor.runtimeconfig.json
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7DataProcessor.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7DataProcessor.pdb
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\HL7-V2.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\Oracle.ManagedDataAccess.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\System.Diagnostics.EventLog.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\System.DirectoryServices.Protocols.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\runtimes\linux\lib\net8.0\System.DirectoryServices.Protocols.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\runtimes\osx\lib\net8.0\System.DirectoryServices.Protocols.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\runtimes\win\lib\net8.0\System.DirectoryServices.Protocols.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\bin\Debug\net9.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.csproj.AssemblyReference.cache
+C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.AssemblyInfoInputs.cache
+C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.AssemblyInfo.cs
+C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.csproj.CoreCompileInputs.cache
+C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.sourcelink.json
+C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\HL7DataP.F4263F85.Up2Date
+C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\refint\HL7DataProcessor.dll
+C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.pdb
+C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\HL7DataProcessor.genruntimeconfig.cache
+C:\Users\Kombinator\source\repos\HL7DataProcessor\obj\Debug\net9.0\ref\HL7DataProcessor.dll

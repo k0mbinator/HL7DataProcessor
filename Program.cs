@@ -20,7 +20,8 @@ namespace HL7DataProcessor
             }
             string connectionString = $"DATA SOURCE=localhost:1521/XEPDB1;USER ID=PatientAppUser;PASSWORD={dbPassword};";
 
-            string hl7Directory = "HL7_Messages";
+            string hl7Directory = Path.Combine(AppContext.BaseDirectory, "HL7_Messages");
+
             if (!Directory.Exists(hl7Directory))
             {
                 Directory.CreateDirectory(hl7Directory);
