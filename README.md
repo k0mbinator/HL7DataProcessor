@@ -3,6 +3,21 @@
 Dieses Projekt zielt darauf ab, ein **vollständiges End-to-End-Beispiel für die Verarbeitung von HL7v2-Nachrichten** zu demonstrieren. Es liest HL7-Daten aus Dateisystemen, parst diese mittels einer C#-Bibliothek, extrahiert relevante Patienteninformationen und speichert diese in einer Oracle-Datenbank. Abschließend werden diese Daten über eine Webanwendung zugänglich gemacht, um CRUD-Operationen (Create, Read, Update, Delete) zu ermöglichen und die Patientenverwaltung zu visualisieren. Damit wird meine Fähigkeit zur Implementierung **medizinischer Schnittstellen und Dateninfrastrukturen** unter Beweis gestellt.
 
 ---
+### Web-Applikation: PatientSolution (Blazor WebAssembly)
+
+Als logische Erweiterung der HL7-Datenintegrations-Pipeline wurde eine eigenständige, interaktive Web-Applikation namens **PatientSolution** entwickelt. Diese Blazor WebAssembly-Anwendung dient dazu, die in der Oracle-Datenbank gespeicherten Patientendaten übersichtlich zu visualisieren und zu verwalten.
+
+**Hauptmerkmale der PatientSolution:**
+* **Interaktive Patientenübersicht:** Anzeige der extrahierten Patientendaten in einem dynamischen und filterbaren Grid.
+* **Moderne Benutzeroberfläche:** Implementiert mit Blazor Bootstrap für eine ansprechende und responsive Darstellung.
+* **API-Integration:** Kommunikation mit einer ASP.NET Core Web API, um Patientendaten sicher abzurufen und zu verarbeiten.
+
+Dieses Frontend-Projekt demonstriert die Fähigkeit, eine vollständige End-to-End-Lösung von der Datenaufnahme bis zur benutzerfreundlichen Visualisierung zu realisieren.
+
+**Das Quellcode-Repository der PatientSolution finden Sie hier:**
+[https://github.com/k0mbinator/PatientSolution](https://github.com/k0mbinator/PatientSolution)
+
+---
 
 ### Entwicklungsprozess und genutzte Technologien
 
@@ -50,6 +65,8 @@ Eine kurze Übersicht über die wichtigsten Methoden in der `Program.cs`-Datei:
 * **HL7-Quelldateien:** Stellen Sie sicher, dass sich Ihre `.hl7`-Dateien im Ordner `HL7_Messages` befinden, der sich im Hauptverzeichnis des Projekts befindet. Jede Datei sollte eine einzelne HL7v2-Nachricht enthalten, wobei jedes Segment durch einen Zeilenumbruch (`\r`) getrennt ist.
 
 ---
+
+
 
 ### Beispiel-Output
 
